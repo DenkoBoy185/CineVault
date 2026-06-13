@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineVault | Home</title>
+  <script type="module" crossorigin src="/CineVault/assets/main-CZwVCx25.js"></script>
+  <link rel="modulepreload" crossorigin href="/CineVault/assets/utils-Blhp9736.js">
+  <link rel="stylesheet" crossorigin href="/CineVault/assets/utils-GxHN6E7Z.css">
+  <link rel="stylesheet" crossorigin href="/CineVault/assets/main-B_2a1Z8c.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">CINE<span>VAULT</span></a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="watchlist.html">Watchlist</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search for movies or TV shows..." autocomplete="off" />
+        <div id="search-results" class="search-results-dropdown hidden"></div>
+      </div>
+    </section>
+
+    <section class="genre-filters">
+      <div id="genre-container" class="genre-container"></div>
+    </section>
+
+    <section class="trending">
+      <div class="section-header">
+        <h2>Trending Now</h2>
+        <div class="controls">
+           <select id="sort-select">
+              <option value="popularity.desc">Sort by Popularity</option>
+              <option value="vote_average.desc">Sort by Rating</option>
+              <option value="release_date.desc">Sort by Release Date</option>
+           </select>
+        </div>
+      </div>
+      <div id="movie-grid" class="movie-grid">
+        <div class="loading">Loading...</div>
+      </div>
+    </section>
+  </main>
+  
+</body>
+</html>
