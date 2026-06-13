@@ -53,7 +53,7 @@ async function loadTrending() {
     currentMovies = await getTrending();
     renderMovies();
   } catch (err) {
-    grid.innerHTML = '<div class="loading">Failed to load movies. Did you add the API Key?</div>';
+    grid.innerHTML = `<div class="loading" style="color:red">Failed to load movies. Error: ${err.message || err}</div>`;
   }
 }
 
@@ -153,6 +153,14 @@ document.addEventListener('click', (e) => {
   }
 });
 sortSelect.addEventListener('change', renderMovies);
+
+// Global Error Handler for debugging
+window.addEventListener('error', (e) => {
+  grid.innerHTML = `<div class="loading" style="color:red">JS Error: ${e.message}</div>`;
+});
+window.addEventListener('unhandledrejection', (e) => {
+  grid.innerHTML = `<div class="loading" style="color:red">Async Error: ${e.reason}</div>`;
+});
 
 // Init
 loadTrending();
