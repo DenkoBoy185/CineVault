@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineVault | Watchlist</title>
+  <link rel="stylesheet" href="./src/css/main.css" />
+  <link rel="stylesheet" href="./src/css/watchlist.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">CINE<span>VAULT</span></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="watchlist.html" class="active">Watchlist</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="watchlist-header">
+      <h2>My Watchlist</h2>
+      <div class="filter-controls">
+        <button id="filter-all" class="btn active">All</button>
+        <button id="filter-unwatched" class="btn btn-secondary">Unwatched</button>
+        <button id="filter-watched" class="btn btn-secondary">Watched</button>
+      </div>
+    </div>
+    
+    <div id="watchlist-grid" class="movie-grid watchlist-grid">
+      <!-- Cards rendered here -->
+    </div>
+  </main>
+  
+  <script type="module" src="./src/js/watchlist_page.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+.backdrop {
+  width: 100%;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.backdrop-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+}
+
+.detail-poster {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  flex-shrink: 0;
+}
+
+.detail-meta {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detail-meta h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.detail-meta h1 span {
+  font-weight: 400;
+  color: var(--text-sec);
+}
+
+.meta-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.rating {
+  color: var(--gold);
+  font-weight: bold;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-secondary {
+  background-color: var(--surface);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.overview {
+  margin-top: 1rem;
+}
+
+.overview h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.cast-section, .similar-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.cast-section h2, .similar-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--surface);
+  padding-bottom: 0.5rem;
+}
+
+.cast-carousel {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.cast-card {
+  min-width: 140px;
+  background-color: var(--surface);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cast-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cast-info {
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.cast-info h4 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.cast-info p {
+  font-size: 0.8rem;
+  color: var(--text-sec);
+}
+
+@media (max-width: 768px) {
+  .backdrop-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  .detail-poster {
+    width: 200px;
+  }
+  .meta-row {
+    justify-content: center;
+  }
+  .action-buttons {
+    justify-content: center;
+  }
+}
