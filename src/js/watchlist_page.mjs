@@ -42,7 +42,12 @@ function renderWatchlist() {
   if(currentFilter === 'unwatched') filtered = watchlist.filter(m => !m.watched);
 
   if (filtered.length === 0) {
-    grid.innerHTML = '<div class="loading">No movies found in this list.</div>';
+    grid.innerHTML = `
+      <div class="empty-state">
+        <h3>🎬 Your watchlist is empty</h3>
+        <p>Go to <a href="index.html">Home</a> and click on a movie to add it to your watchlist!</p>
+      </div>
+    `;
     return;
   }
   
